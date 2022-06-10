@@ -1,0 +1,4 @@
+CREATE FUNCTION fnc_category_products(@categoryId int)
+RETURNS TABLE
+AS
+RETURN select Name, Stock, Price, Barcode from Products where CategoryId=@categoryId

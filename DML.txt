@@ -1,0 +1,17 @@
+INSERT INTO dbo.Categories (Name) VALUES ('Telefon')
+
+INSERT INTO dbo.Categories (Name) VALUES ('Bilgisayar')
+
+INSERT INTO dbo.Products (Name, Price, Stock, Barcode, CategoryID) VALUES ('Samsung S10' , 4500, 10 , '1244645', 1)
+
+INSERT INTO dbo.Products (Name, Price, Stock, Barcode, CategoryID) VALUES ('Asus C500' , 14000, 2 , '2562647', 2)
+
+INSERT INTO dbo.ProductFeatures (Width, Height, Color, ProductID) VALUES (172, 192,'Mavi', 1)
+
+INSERT INTO dbo.ProductFeatures (Width, Height, Color, ProductID) VALUES (1452, 3256,'Gri', 2)
+
+
+UPDATE dbo.Products SET Name= 'Samsung S7' Price=7000 WHERE Id=1 
+
+
+SELECT * FROM dbo.Products ORDER BY Price

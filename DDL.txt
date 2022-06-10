@@ -1,0 +1,26 @@
+CREATE DATABASE HomeworkDB
+
+
+CREATE TABLE Categories(
+ CategoryID INT IDENTITIY PRIMARY KEY,
+ Name  VARCHAR(30)
+)
+
+
+CREATE TABLE Products(
+ ProductID INT IDENTITIY PRIMARY KEY,
+ Name  VARCHAR(30),
+ Price   DECIMAL,
+ Stock   INT,
+ Barcode  VARCHAR(30),
+ CategoryID INT FOREIGN KEY REFERENCES Categories(CategoryID)
+)
+
+
+CREATE TABLE ProductFeatures(
+ ProductFeatureID INT IDENTITIY PRIMARY KEY,
+ Width   INT,
+ Height  INT,
+ Color   VARCHAR(30),
+ ProductID INT FOREIGN KEY REFERENCES Products(ProductID)
+)
